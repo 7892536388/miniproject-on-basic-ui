@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON Config Editor</title>
+</head>
+<body>
+    <h2>Edit JSON Configuration</h2>
+    <form method="POST">
+        {% for key, value in data.items() %}
+            <label>{{ key }}:</label>
+            <input type="text" name="{{ key }}" value="{{ value }}"><br><br>
+        {% endfor %}
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>
